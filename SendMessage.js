@@ -1,6 +1,6 @@
 const { EmbedBuilder } = require('discord.js');
 
-async function sendMessage(client, channelId, title, description, color = 0x0099FF) {
+async function sendMessage(client, targetId, title, description, color = 0x0099FF) {
     try {
         let target;
 
