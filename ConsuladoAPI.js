@@ -10,7 +10,6 @@ async function callApi() {
     }
     const queryString = new URLSearchParams(parameters).toString();
     url += "?" + queryString;
-    console.info("URL appelée :", url);
 
     try {
         let response = await fetch(url);
@@ -82,8 +81,6 @@ async function checkNewSlots(client) {
 
             // On ajoute les nouveaux créneaux à la liste des connus
             newSlots.forEach(s => knownSlots.add(s.slot));
-        } else {
-            console.log("Rien de neuf sur l'API...");
         }
 
         // OPTIONNEL : On nettoie knownSlots pour ne pas garder les vieux créneaux disparus
